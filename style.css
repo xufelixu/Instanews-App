@@ -55,52 +55,39 @@
 body {
   font-family: "Open Sans";
   background-color: black;
+  font-size: 12px;
+  border: solid green;
+  height: 700px;
   text-align: center;
-  font-size: 16px;
+  padding: 40px;
 }
 
-.logo {
-  margin-top: 20%;
+.page-container {
+  border: solid blue;
+  padding-top: 60px;
 }
 
 form {
-  text-align: center;
+  border: solid green;
   color: #ffffff;
 }
 
 .selection {
+  border: solid green;
   font-size: 20px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 35%;
+.bottom-banner h3 {
+  border: solid green;
   color: #c2c2c2;
 }
 
-@media all and(min-width:600px) {
-  body {
-    display: flex;
-    flex-direction: row;
-  }
-
-  form {
-    border: solid green;
-  }
-
-  .selection {
-    border: solid blue;
-  }
-
-  footer {
-    border: white;
-  }
-
-  .logo {
-    order: 1;
-  }
-
-  .select-webs {
-    order: 2;
-  }
+.bottom-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: solid red;
+  height: 300px;
+}
+@media only screen and (min-width: 600px) {
 }
