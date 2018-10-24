@@ -32,6 +32,14 @@ body {
 
         display: flex;
         justify-content: flex-start;
+
+        width: 100%;
+    }
+
+    @include webpage {
+
+        height: 600px;
+
     }
 }
 
@@ -39,25 +47,46 @@ body {
 
 .logo img {
 
-    width: 40%;
-    height: 40%;
+
     margin-top: 20px;
 
     @include tablet {
-        width: 40%;
-        height: 40%;
+        width: 30%;
+        height: 30%;
+
+
         margin-left: 30%;
         margin-right: 30%;
 
     }
 
     @include desktop {
-        width: 40%;
-        height: 40%;
+
         margin: 20% 30%;
+    }
+
+    @include webpage {
+        width: 100%;
+        height: 100%;
+
+        margin-left: 10px;
+
+    }
+
+}
+
+.top-banner {
+    @include webpage {
+        display: flex;
+
 
     }
 }
+
+
+
+
+
 
 
 
@@ -68,6 +97,14 @@ body {
         display: flex;
         align-items: center;
     }
+
+
+    @include webpage {
+        margin-left: 30px;
+        padding-top: 20px;
+
+    }
+
 }
 
 
@@ -80,6 +117,13 @@ body {
         font-size: 14px;
 
     }
+
+    @include webpage {
+        font-size: 16px;
+
+    }
+
+
 }
 
 
@@ -140,7 +184,7 @@ body {
 
 .selectPage {
 
-    border: solid red;
+
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -152,6 +196,17 @@ body {
         flex-wrap: wrap;
 
     }
+
+    @include desktop {
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+    }
+
+    @include webpage {}
+
 }
 
 
@@ -190,7 +245,9 @@ body {
 
 
 
-.loading {
+.loading img {
+    width: 40px;
+    height: 40Px;
 
     position: absolute;
     top: 50%;
