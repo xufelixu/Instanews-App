@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Open Sans";
   src: url("./assets/fonts/OpenSans-Light.eot");
   src: url("./assets/fonts/OpenSans-Light.eot?#iefix")
@@ -88,6 +88,4 @@ form {
   justify-content: center;
   border: solid red;
   height: 300px;
-}
-@media only screen and (min-width: 600px) {
-}
+} */
