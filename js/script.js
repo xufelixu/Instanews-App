@@ -32,7 +32,7 @@ $(document).ready(function () {
           console.log(links);
 
 
-          $('.selectPage').append('<a href="' + links + '" class="pictures" style="background:url(' + articleImage + ')">' + '<h2>' + abstract + '</h2>' + '</a>');
+          $('.selectPage').append('<a href="' + links + '" class="pictures" style="background:url(' + articleImage + '); background-size:cover">' + '<h2>' + abstract + '</h2>' + '</a>');
         }
 
       }).always(function () {

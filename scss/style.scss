@@ -219,7 +219,6 @@ body {
     flex: 1 0 100%;
     display: flex;
     background-position: center left;
-    background-size: cover;
     color: white;
     text-decoration: none;
 
@@ -251,5 +250,9 @@ body {
 
     position: absolute;
     top: 50%;
-    z-index: 10%;
+    z-index: 10;
+}
+
+.selectPage .pictures{
+    background-size: cover;
 }
