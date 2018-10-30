@@ -6,211 +6,56 @@
 @import'partials/base';
 @import'partials/font';
 
-
-
 body {
 
     font-family: "Open Sans";
-    background-color: black;
+    background-color: rgb(180, 66, 66);
     font-size: 12px;
     text-align: center;
     position: relative;
 }
 
-
-
 .page-container {
 
-
     @include tablet {
-
         display: flex;
         flex-wrap: wrap;
     }
 
     @include desktop {
-
         display: flex;
         justify-content: flex-start;
-
         width: 100%;
     }
 
     @include webpage {
-
-        height: 600px;
-
+        height: 10%;
     }
 }
-
-
 
 .logo img {
-
-
     margin-top: 20px;
-
-    @include tablet {
-        width: 30%;
-        height: 30%;
-
-
-        margin-left: 30%;
-        margin-right: 30%;
-
-    }
-
-    @include desktop {
-
-        margin: 20% 30%;
-    }
-
-    @include webpage {
-        width: 100%;
-        height: 100%;
-
-        margin-left: 10px;
-
-    }
-
+    width: 30%;
 }
 
-.top-banner {
-    @include webpage {
-        display: flex;
+form {
+    width: 100%;
 
+    .search {
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+        }
 
+        .selection {
+            width: 30%;
+            height: 50px;
+            font-size: 1.5em;
+            border-radius: 6px;
+            font-weight: 600;
+        }
     }
 }
-
-
-
-
-
-
-
-
-.select-webs {
-
-    @include tablet {
-
-        display: flex;
-        align-items: center;
-    }
-
-
-    @include webpage {
-        margin-left: 30px;
-        padding-top: 20px;
-
-    }
-
-}
-
-
-
-.selection {
-    font-size: 18px;
-
-    @include tablet {
-
-        font-size: 14px;
-
-    }
-
-    @include webpage {
-        font-size: 16px;
-
-    }
-
-
-}
-
-
-
-.search-form-inner h3 {
-
-    font-size: 12px;
-    color: white;
-
-    @include tablet {
-
-        font-size: 16px;
-    }
-
-}
-
-
-
-
-.bottom-banner {
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 50px;
-
-    @include desktop {
-
-        display: flex;
-        justify-content: flex-start;
-        height: 70px;
-
-    }
-
-}
-
-
-
-
-.bottom-banner h3 {
-
-    color: #c2c2c2;
-    font-size: 16px;
-
-
-    @include desktop {
-
-        text-align: left;
-        padding-left: 20px;
-        margin-bottom: 30px;
-        font-size: 14px;
-        margin-top: 20px;
-    }
-}
-
-
-
-
-.selectPage {
-
-
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-
-    @include tablet {
-
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    @include desktop {
-
-        display: flex;
-        flex-wrap: wrap;
-
-
-    }
-
-    @include webpage {}
-
-}
-
-
-
 
 .pictures {
 
@@ -243,7 +88,32 @@ body {
     }
 }
 
+.selectPage {
 
+
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @include tablet {
+
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    @include desktop {
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+    }
+
+    @include webpage {}
+
+}
 
 .loading img {
     width: 40px;
