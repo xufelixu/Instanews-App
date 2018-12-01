@@ -8,172 +8,273 @@
 
 body {
   font-family: "Open Sans";
-  background-color: black;
-  font-size: 12px;
+  background-color: $back-ground;
+  font-size: $font-size-mobile;
+  height: 100vh;
+}
+
+
+header {
+  @include flex();
+  margin-top: 5px;
+  height: 90%;
+  width: 100%;
+
+}
+
+
+.logo {
+
+  margin: 0 auto;
   text-align: center;
-  position: relative;
-}
+  font-size: $font-size-mobile;
 
-.page-container {
+  img {
+    margin: 0;
+    height: 220px;
+  }
+
   @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+
   }
 
   @include desktop {
-    display: flex;
-    justify-content: flex-start;
 
-    width: 100%;
+    padding-left: 2rem;
+    margin: 0 0;
+    align-content: flex-start;
+
   }
 
-  @include webpage {
-    height: 600px;
-  }
 }
 
-.logo img {
-  margin-top: 20px;
+.choose-section-container {
+
+  padding-bottom: 15px;
+  font-size: $font-size-mobile;
+  margin-top: 1rem;
+
+  h3 {
+    color: white;
+    margin-bottom: 1rem;
+
+  }
 
   @include tablet {
-    width: 30%;
-    height: 30%;
 
-    margin-left: 30%;
-    margin-right: 30%;
+    @include flex();
+    width: 100%;
+    font-size: 14px;
+
   }
 
   @include desktop {
-    margin: 20% 30%;
+
+    margin: 0 0;
+    padding-left: 0rem;
+    padding-bottom: 2rem;
+    font-size: $font-size-desktop;
+    text-align: left;
+
+
   }
 
-  @include webpage {
-    width: 100%;
-    height: 100%;
-
-    margin-left: 10px;
-  }
 }
 
-.top-banner {
-  @include webpage {
-    display: flex;
-  }
-}
-
-.select-webs {
-  @include tablet {
-    display: flex;
-    align-items: center;
-  }
-
-  @include webpage {
-    margin-left: 30px;
-    padding-top: 20px;
-  }
-}
 
 .selection {
-  font-size: 18px;
 
-  @include tablet {
-    font-size: 14px;
-  }
-
-  @include webpage {
-    font-size: 16px;
-  }
-}
-
-.search-form-inner h3 {
-  font-size: 12px;
-  color: white;
-
-  @include tablet {
-    font-size: 16px;
-  }
-}
-
-.bottom-banner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 50px;
+  margin: 0 auto;
+  width: 107px;
+  height: 32px;
 
   @include desktop {
+    margin: 0 0;
+    align-content: flex-start;
+
+  }
+
+}
+
+
+footer {
+
+  width: 100%;
+  height: 9%;
+
+  bottom: 0;
+
+  font-size: $font-size-mobile;
+  color: #c2c2c2;
+  text-align: center;
+
+  @include desktop {
+
+    font-size: $font-size-desktop;
+    text-align: left;
+    padding-left: 2rem;
+
+  }
+
+}
+
+header.activate {
+  margin: 0;
+  height: 240px;
+  max-width: 600px;
+  padding: 32px;
+
+  @include tablet {
+
+    height: 72px;
+    max-width: 999px;
+
+  }
+
+  @include desktop {
+
+    height: 72px;
+  }
+
+}
+
+
+header.activate .logo {
+
+  height: 220px;
+  width: 300px;
+
+  @include tablet {
+
+    height: 135px;
+    max-width: 600px;
+    padding-right: 300px;
+
+  }
+
+  img {
+
+    width: 150px;
+    height: 150px;
+
+    @include tablet {
+
+      width: 67px;
+      height: 67px;
+
+    }
+
+  }
+
+}
+
+header.activate .choose-section-container {
+
+  padding: 10px;
+
+  margin: 0;
+
+  @include tablet {
+
+    text-align: left;
+
+    padding-left: 60px;
+
+  }
+
+}
+
+header.activate select.selection {
+
+  margin: 0 auto;
+  width: 107px;
+  height: 32px;
+
+  @include tablet {
+
+    margin: 0;
+    height: 32px;
     display: flex;
     justify-content: flex-start;
-    height: 70px;
-  }
-}
 
-.bottom-banner h3 {
-  color: #c2c2c2;
-  font-size: 16px;
+  }
 
   @include desktop {
-    text-align: left;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    margin-top: 20px;
+
+    align-content: flex-start;
+    font-size: $font-size-desktop;
+
   }
+
 }
+
+
 
 .selectPage {
-  color: white;
-  display: flex;
+  display: relative;
   flex-wrap: wrap;
-  margin-top: 30px;
+  flex-direction: column;
 
   @include tablet {
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 50px;
   }
 
-  @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-  @include webpage {
-  }
 }
 
-.pictures {
-  width: 200px;
-  height: 400px;
-  flex: 1 0 100%;
-  display: flex;
-  background-position: center left;
-  background-size: cover;
-  color: white;
+ul {
+  list-style: none;
+}
+
+
+a,
+li {
   text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
     flex: 1 0 50%;
-    width: 150px;
-    height: 400px;
+
   }
 
   @include desktop {
-    display: flex;
-    flex-wrap: wrap;
+
     flex: 1 0 25%;
+
   }
 
-  h2 {
-    align-self: flex-end;
-  }
 }
 
-.loading img {
-  width: 40px;
-  height: 40px;
-
+.title {
   position: absolute;
-  top: 50%;
-  z-index: 10%;
+  bottom: 0;
+  text-align: left;
+}
+
+
+.loading {
+
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 150px;
+    height: 150px;
+
+  }
 }

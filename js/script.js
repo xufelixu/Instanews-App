@@ -1,56 +1,80 @@
 $(document).ready(function () {
 
+  $('.loading').hide();
 
-  // set some inital variables
-  const $loader = $('ajx-loader');
-  const $stores = $('.selectPage');
+  $('.selection').on('change', function (event) {
 
-  $('#sections').on('change', function () {
-    //get the selet value
-    const section = $(this).val();
+    $('.loading').show();
 
-    if (!section.length) {
-      returen;
-    }
-    //clear out the old stories
-    $stores.empty();
-    //show the loader gif
-    $loader.show();
-    //get stories from the API
+    $('header').addClass('activate');
 
-    getStories($stories, $loader, section);
+    $('.logo img').css('padding-top', '0px');
 
-    var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json";
+    event.preventDefault();
+
+    $('.selectPage').empty();
+
+    var newscategory = $('.selection option:selected').val();
+
+    var url = 'https://api.nytimes.com/svc/topstories/v2/' + newscategory + '.json';
+
     url += '?' + $.param({
+
       'api-key': "5d68eebb4fa44bd381bd7fe2988a363d"
+
     });
 
-    $.ajax - loader({
+    $.ajax({
+
         url: url,
+
         method: 'GET',
-        dataType: 'json'
+
+      }).done(function (response) {
+
+        var results = response.results;
+
+        var filteredList = results.filter(function (item) {
+          return item.multimedia.length
+        }).slice(0, 12);
+
+        $.each(filteredList, function (key, value) {
+
+          var url = value.url;
+
+          var pic = value.multimedia[4].url;
+
+          var abstract = value.abstract;
+
+          var link = '';
+
+          link += '<a href="' + url + '">';
+
+          link += '<li class="article-picture" style="background-image:url(' + pic + ')">';
+
+          link += '<p class="title">' + abstract + '</p>';
+
+          link += '</li></a>';
+
+
+          $('.selectPage').append(link);
+
+        })
+
       })
 
-      .done(function (data) {
+      .fail(function (err) {
 
-        $('.selectPage').empty();
+        console.log('IN AJAX FAIL');
 
-        const titles = data.results;
-
-        for (let i = 0; i < 12; i++) {
-
-          let abstract = titles[i].abstract;
-          let articleImage = titles[i].multimedia[4].url;
-          let links = titles[i].url;
-
-
-
-          $('.selectPage').append('<a href="' + links + '" class="pictures" style="background:url(' + articleImage + '); background-size:cover">' + '<h2>' + abstract + '</h2>' + '</a>');
-        }
+        throw err;
 
       }).always(function () {
 
+        $('.loading').hide();
 
       });
+
   });
+
 });
