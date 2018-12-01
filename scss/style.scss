@@ -247,7 +247,17 @@ li {
 
   }
 
+<<<<<<< HEAD
   @include desktop {
+=======
+    width: 200px;
+    height: 400px;
+    flex: 1 0 100%;
+    display: flex;
+    background-position: center left;
+    color: white;
+    text-decoration: none;
+>>>>>>> 036ae7fa23f5d128479886d3d289199d82795afa
 
     flex: 1 0 25%;
 
@@ -276,5 +286,15 @@ li {
     width: 150px;
     height: 150px;
 
+<<<<<<< HEAD
   }
+=======
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+.selectPage .pictures{
+    background-size: cover;
+>>>>>>> 036ae7fa23f5d128479886d3d289199d82795afa
 }

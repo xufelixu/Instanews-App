@@ -46,6 +46,7 @@ $(document).ready(function () {
 
           var abstract = value.abstract;
 
+<<<<<<< HEAD
           var link = '';
 
           link += '<a href="' + url + '">';
@@ -68,6 +69,10 @@ $(document).ready(function () {
         console.log('IN AJAX FAIL');
 
         throw err;
+=======
+          $('.selectPage').append('<a href="' + links + '" class="pictures" style="background:url(' + articleImage + '); background-size:cover">' + '<h2>' + abstract + '</h2>' + '</a>');
+        }
+>>>>>>> 036ae7fa23f5d128479886d3d289199d82795afa
 
       }).always(function () {
 
