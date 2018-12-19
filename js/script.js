@@ -6,9 +6,7 @@ $(document).ready(function () {
 
     $('.loading').show();
 
-    $('header').addClass('activate');
-
-    $('.logo img').css('padding-top', '0px');
+    $('header').removeClass('logo').addClass('activate')
 
     event.preventDefault();
 
@@ -46,20 +44,21 @@ $(document).ready(function () {
 
           var abstract = value.abstract;
 
-          var link = '';
+          $('.selectPage').append(
 
-          link += '<a href="' + url + '">';
+            '<li>' +
+            '<a href="' + url + '">' +
+            '<div class="article-picture" style="background-image:url(' + pic + ')">' +
+            '<p class="title">' + abstract + '</p>' +
+            '</div>' +
+            '</a>' +
+            '</li>'
 
-          link += '<li class="article-picture" style="background-image:url(' + pic + ')">';
-
-          link += '<p class="title">' + abstract + '</p>';
-
-          link += '</li></a>';
+          );
 
 
-          $('.selectPage').append(link);
 
-        })
+        });
 
       })
 
