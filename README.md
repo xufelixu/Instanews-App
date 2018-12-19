@@ -3,7 +3,7 @@
   * Fetch data from the Top Stories v2 NYT API endpoint.
   * Only display a maximum of 12 stories in the grid and only display a     story if it has a photo associated with it.
   * Transition users between UI states, beginning where no stories have been returned, and then subsequently appending stories to populate the grid (incorporate a loader GIF)
-  
+
 ## Setup
  * Vs code
 
@@ -15,7 +15,7 @@
   * ajax
 * sass
 
- ##Contributing Links
+## Contributing Links
 
 * http://developer.nytimes.com/
 
